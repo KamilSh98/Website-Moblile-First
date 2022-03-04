@@ -51,6 +51,8 @@ header
 
 .container
     .all-boxes
+        h2
+            text-align: center
         .boxes
             .box
                 margin: 0 auto
@@ -63,9 +65,48 @@ header
                     border-radius: 25px
                 img:hover
                     opacity: 0.9
-                h4
+                .info
+                    display: flex
                     font-size: 3.3vw
                     position: absolute
-                    top: 37.5%
+                    top: 80%
                     left: 8%
-                    color: $lighterblue
+                    background: #121212
+                    padding: 5px
+                    border-radius: 20px
+                    h4
+                        color: $lighterblue
+                        padding: 0
+                        margin: 0
+                    .bolts
+                        padding: 0
+                        margin: 0 5px 0 0
+                        i.activated
+                            color: $lightblue
+                        i.off
+                            color: #fcfcfc
+                            
+.grid-col-2
+    grid-column: span 2
+
+footer
+    text-align: center
+    background: linear-gradient(180deg,$lightblue 0%, $darkblue 40%)
+    height: 70px
+    h5
+        font-size: 0.8rem
+        padding: 30px 0 0 0
+        color: $lighterblue
+        
+        
+        
+@media (min-width: 600px)
+    .container
+        .all-boxes
+            .boxes
+                display: grid
+                gap: 2px
+                grid-template-columns: repeat(2, 1fr)
+                .box
+                    .info
+                        font-size: 2vw
